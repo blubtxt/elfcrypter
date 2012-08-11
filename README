@@ -1,0 +1,15 @@
+
+Overview:
+
+elfcrypter is a free, open source, ELF ( Executable and Linkable Format ) software protector, written in C/C++ and Assembler. Support for the most of all unix based operating systems.
+
+Feel free to report bugs / suggestions.
+
+Current Features:
+- Code Section encryption
+
+Tested operating systems:
+- Ubuntu 12.04 LTS ( Precise Pengolin ) 
+
+*Note*: 
+This is a very early Release. There is lot of stuff to do/recode. This Release works at the current state with small binaries only. 
