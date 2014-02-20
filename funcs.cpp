@@ -17,7 +17,7 @@
  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "../include/funcs.h"
+#include "funcs.h"
 
 bool file_exists( const char * filename )
 {
