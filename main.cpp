@@ -32,16 +32,16 @@ void PRE_LOADER()
     "GetEIP:\n"
     "pop edx\n"
     "add edx, 89\n"
-	//"jmp [edx]\n"
-	"mov     esi, [edx]\n"
+    
+    "mov     esi, [edx]\n"
 
-	"mov ebx, [edx]\n"
+    "mov ebx, [edx]\n"
     "and ebx, 0xFFFFF000\n"
 
     "mov eax, 125\n"
-	"mov ecx, 0x1000\n"
-	"mov edx, 0x7\n"
-	"int 0x80\n"
+    "mov ecx, 0x1000\n"
+    "mov edx, 0x7\n"
+    "int 0x80\n"
 
     "call GetEIP2\n"
 
@@ -51,18 +51,18 @@ void PRE_LOADER()
     "add edx, 57\n"
     "mov     edi, [edx]\n"
 
-	"mov     edx, 0x57\n"
-	"mov     eax, 0\n"
-	"lea     esi, [esi+0]\n"
+    "mov     edx, 0x57\n"
+    "mov     eax, 0\n"
+    "lea     esi, [esi+0]\n"
 
-	"CryptLoop:\n"
-	"mov     ecx, edx\n"
-	"xor     cl, [eax+esi]\n"
-	"mov     [eax+esi], cl\n"
-	"add     eax, 1\n"
-	"cmp     eax, edi\n"
-	"lea     edx, [ecx+edx+0x57]\n"
-	"jnz     short CryptLoop\n"
+    "CryptLoop:\n"
+    "mov     ecx, edx\n"
+    "xor     cl, [eax+esi]\n"
+    "mov     [eax+esi], cl\n"
+    "add     eax, 1\n"
+    "cmp     eax, edi\n"
+    "lea     edx, [ecx+edx+0x57]\n"
+    "jnz     short CryptLoop\n"
 
     "popad\n"
 
